@@ -1,0 +1,12 @@
+bloglist.txt
+search_result_*.html
+dist/
+
+query.txt
+entries/*.html
+mid_data/*.html
+text/*.txt
+cabocha_xml/*.xml
+verb_chain/*.txt
+
+[0-9]*/
