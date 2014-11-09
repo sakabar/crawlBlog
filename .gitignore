@@ -10,3 +10,4 @@ cabocha_xml/*.xml
 verb_chain/*.txt
 
 /result*
+exe_list.sh
