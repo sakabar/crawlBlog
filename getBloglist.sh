@@ -22,7 +22,8 @@ row=100
 
 #検索するページ数
 page=10
-cat /dev/null > query.txt
+echo "#"$@ > query.txt
+# cat /dev/null > query.txt
 for i in {00..$[$page-1]}; do
   start=$[0 + $row * $i]
   query="http://search.ameba.jp/search.html?q="$str"&row="$row"&profileRow=&target=blog&aid=&author=all&start="$start
