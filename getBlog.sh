@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+bloglist=$1
+
 function change_proxy(){
   export http_proxy=http://`cat proxy_list.txt | grep -v "^#" | sort -R | head -n1`/
 }
@@ -11,7 +13,7 @@ function my_wget(){
 
 
 #sort -Rが使える環境である必要がある
-for url in `cat bloglist.txt`; do
+for url in `cat $bloglist`; do
   output=`echo $url | sed -e 's|^http://ameblo.jp/||' | tr '/' '_'`
   my_wget $url entries/$output
 
