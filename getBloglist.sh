@@ -30,5 +30,5 @@ for i in {00..$[$page-1]}; do
   wget $query -T5 --tries=1 --no-proxy -O search_result_$i".html"
 done
 
-cat search_result_*.html | grep -o "http://ameblo.jp/.*/entry-.*.html" > bloglist.txt
+cat search_result_*.html | grep -o "http://ameblo.jp/.*/entry-.*.html" | sort > bloglist.txt
 
