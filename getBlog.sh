@@ -9,12 +9,19 @@ function change_proxy(){
 #元々プロキシを使っていたが、遅いのでやめた。
 function my_wget(){
   if true; then
-    wget $1 -T2 --tries=1 --inet4-only --no-proxy -O $2
-    sleep $[$RANDOM % 3]
+    which usleep > /dev/null
+    if test $? -eq 0; then
+      wget $1 -T2 --tries=1 --inet4-only --no-proxy -O $2
+      usleep $[($RANDOM % 10000) * 50]
+    else
+      wget $1 -T2 --tries=1 --inet4-only --no-proxy -O $2
+      sleep $[$RANDOM % 3]
+    fi
   else
   #プロキシを使うコード
+    exit
     change_proxy
-     wget $1 -T2 --tries=1 --inet4-only -O $2
+    wget $1 -T2 --tries=1 --inet4-only -O $2
   fi
 }
 
