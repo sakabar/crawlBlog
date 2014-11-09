@@ -27,3 +27,4 @@ fi
 dir=`date "+%Y%m%d%H%M"`
 mkdir $dir
 mv entries/ text/ verb_chain/ mid_data/ cabocha_xml/ query.txt search_result_*.html bloglist.txt $dir
+mv $dir result

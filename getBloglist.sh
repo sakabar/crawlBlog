@@ -21,7 +21,7 @@ row=100
 # echo $query > query.txt
 
 #検索するページ数
-page=3
+page=10
 cat /dev/null > query.txt
 for i in {00..$[$page-1]}; do
   start=$[0 + $row * $i]
