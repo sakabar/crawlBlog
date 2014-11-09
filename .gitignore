@@ -9,4 +9,4 @@ text/*.txt
 cabocha_xml/*.xml
 verb_chain/*.txt
 
-[0-9]*/
+result/
