@@ -13,7 +13,7 @@ if test $? -eq 1; then
 fi
 
 #ブログ一覧をもとに、ブログをダウンロード
-./getBlog.sh
+./getBlog.sh ./bloglist.txt
 
 #各エントリから本文のみを抽出
 ./extractText.sh

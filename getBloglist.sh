@@ -22,7 +22,8 @@ row=100
 
 #検索するページ数
 page=10
-cat /dev/null > query.txt
+echo "#"$@ > query.txt
+# cat /dev/null > query.txt
 for i in {00..$[$page-1]}; do
   start=$[0 + $row * $i]
   query="http://search.ameba.jp/search.html?q="$str"&row="$row"&profileRow=&target=blog&aid=&author=all&start="$start
@@ -30,5 +31,5 @@ for i in {00..$[$page-1]}; do
   wget $query -T5 --tries=1 --no-proxy -O search_result_$i".html"
 done
 
-cat search_result_*.html | grep -o "http://ameblo.jp/.*/entry-.*.html" > bloglist.txt
+cat search_result_*.html | grep -o "http://ameblo.jp/.*/entry-.*.html" | sort > bloglist.txt
 
