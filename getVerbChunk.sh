@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 dir=$1
-if test -n $dir; then
+if test -z $dir; then
   dir=`pwd`
 fi
 
