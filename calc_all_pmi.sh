@@ -1,8 +1,4 @@
 #!/bin/zsh
-#数学関数をインポートする
-zmodload zsh/mathfunc
-
-
 d=$1
 if test -z $d; then
   d="."
