@@ -2,7 +2,7 @@
 
 dir=$1
 if test -z $dir; then
-  dir=`pwd`
+  dir=.
 fi
 
 for f in $dir/cabocha_xml/*; do
