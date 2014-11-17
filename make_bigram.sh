@@ -1,8 +1,8 @@
 #!/bin/zsh
 
 d=$1
-if test -z $dir; then
-  dir=`pwd`
+if test -z $d; then
+  d="."
 fi
 
 mkdir $d/verb_bigram

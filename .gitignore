@@ -11,3 +11,5 @@ verb_chain/*.txt
 
 /result*
 exe_list.sh
+
+*.bak
