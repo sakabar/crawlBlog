@@ -2,7 +2,7 @@
 
 d=$1
 if test -z $dir; then
-  dir=`pwd`
+  dir="."
 fi
 
 mkdir $d/verb_bigram
