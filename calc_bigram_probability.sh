@@ -2,7 +2,7 @@
 
 dir=$1
 if test -z $dir; then
-  dir=`pwd`
+  dir=.
 fi
 
 mkdir $dir/bigram_probability
