@@ -13,3 +13,10 @@ verb_chain/*.txt
 exe_list.sh
 
 *.bak
+
+counted_filtered_bigrams.txt
+counted_filtered_verbs.txt
+filtered_bigrams_probability.txt
+filtered_verbs_probability.txt
+filtered_pmi.txt
+list.txt
