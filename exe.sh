@@ -27,7 +27,7 @@ fi
 #bigramを作る
 ./make_bigram.sh
 
-dir=`date "+%Y%m%d%H%M"`
+dir=`date "+%Y_%m%d_%H%M"`
 mkdir $dir
 mv entries/ text/ verb_chain/ mid_data/ cabocha_xml/ verb_bigram/ query.txt search_result_*.html bloglist.txt $dir
 mv $dir result
